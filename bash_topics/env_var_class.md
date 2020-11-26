@@ -71,3 +71,29 @@ fi
 ```
 
 - And can set persistent environment variables in ``.bashrc``
+
+
+
+### Bash Variables
+
+To make a variable persistent, add it to Bash PATH
+
+### Bash PATH
+
+A bunch of files it reads in some order
+
+Specific files/locations that the terminal executes and reads before opening and allowing you, the user, or another program to interact with it.
+
+This is a great location to set some variables. These can then be used by child processes
+
+To be used by child process it's useful to ``export`` the variable in the path.
+
+Write variable in .bashrc and .profile, following DRY
+- Make .profile look and read .bashrc
+- Only have to write variables in .bashrc
+
+**IN PROVISION.sh**
+Adding environment variable in provision.sh when setting up vagrant
+
+```
+echo "EXPORT DB_HOST=192.168.10.200" >> ~/.bashrc
