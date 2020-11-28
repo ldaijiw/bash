@@ -11,18 +11,22 @@
 <tr><th>Access Restrictions</th><th>User Restrictions</th></tr>
 <tr>
 <td>
+
 | Permission | Action | chmod Option |
 |:--------: |:----: |:----------: |
 | Read | View | r or 4 |
 | Write | Edit | w or 2 |
 | Execute | Execute | x or 1 |
+
 </td>
 <td>
+
 | User | Is Output |
 |:-: |:-: |
 | Owner | -rwx------|
 | Group | ----rwx---|
 | Other | -------rwx|
+
 </td>
 </tr>
 </table>
