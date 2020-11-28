@@ -74,7 +74,12 @@ Usage:
 ```bash
 chmod <options> <filename>
 ```
-**LETTER OPTIONS**
+
+<table>
+<tr><th>Letter Options</th><th>Number Options</th></tr>
+<tr>
+<td>
+
 | Options | Definition |
 | :-----: | :--------: |
 | u | owner |
@@ -88,3 +93,56 @@ chmod <options> <filename>
 | - | remove permission |
 | = | set permission |
 
+
+</td>
+<td>
+
+| Options | Definition |
+| :-----: | :--------: |
+| #-- | owner |
+| -#- | group |
+| --# | other |
+| 1 | execute |
+| 2 | write |
+| 4 | read |
+| 3 | execute & write |
+| 5 | read & execute |
+| 6 | read & write |
+| 7 | read, write, & execute |
+
+</td>
+</tr>
+</table>
+
+**Examples**
+- With letters
+```bash
+chmod u+x file1
+```
+- With numbers
+```bash
+chmod 644 file1
+```
+
+**chmod with sudo**
+
+Use sudo to change permissions on files that you do not have ownership of (**NOTE**: Changing permissions the wrong way on the wrong files can quickly mess up a system, use ``sudo`` with caution)
+
+### Recursive Permission Changes
+
+To change permissions of multiple files and directories with one command
+```bash
+chmod 644 -R /path/to/some/directory
+```
+**COMMON TO GIVE FILES PERMISSION OF 644 AND DIRECTORIES 755**
+
+## Changing Owner and Group
+
+Change file owner with ``chown``
+```bash
+sudo chown <new_owner> <old_owner>
+```
+Change file group with ``chgrp``
+```bash
+sudo chgrp <new_group> <old_group>
+```
