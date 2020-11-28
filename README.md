@@ -24,15 +24,15 @@ man <command>
 
 Environment variables contain information about your login session, stored for the system shell to use when executing commands.
 
-Many of these variabels are set by default during installation or user creation
+Many of these variables are set by default during installation or user creation
 
 ## Head, Tail, Sort
 
 - head and tail default 10
-- head -n3 sample.txt (prints first 3 lines)
-- tail -n3 sample.txt (prints last 3 lines)
-- sort sample.txt (sorts in alphabetical order)
-- sort -r sample.txt (sorts in reverse order)
+- ``head -n3 sample.txt`` (prints first 3 lines)
+- ``tail -n3 sample.txt`` (prints last 3 lines)
+- ``sort sample.txt`` (sorts in alphabetical order)
+- ``sort -r sample.txt`` (sorts in reverse order)
 
 
 ## Permissions
