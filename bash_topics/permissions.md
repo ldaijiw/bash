@@ -7,22 +7,26 @@
 - The super user "root" has the ability to access any file on the system, and to change any files owned by root, **sudo** must be used
 - Each file has access restrictions with permissions, user restrictions with owner/group association.
 - Permissions are referred to as bits
-
-There are 3 types of **Access Restrictions**
-
+<table>
+<tr><th>Access Restrictions</th><th>User Restrictions</th></tr>
+<tr>
+<td>
 | Permission | Action | chmod Option |
 |:--------: |:----: |:----------: |
 | Read | View | r or 4 |
 | Write | Edit | w or 2 |
 | Execute | Execute | x or 1 |
-
-There are also 3 types of **User Restrictions**
-
+</td>
+<td>
 | User | Is Output |
 |:-: |:-: |
 | Owner | -rwx------|
 | Group | ----rwx---|
 | Other | -------rwx|
+</td>
+</tr>
+</table>
+
 
 **NOTE**: The restriction type scope is not inheritable, i.e. the file owner will be unaffected by restrictions set for his group or everybody else
 
@@ -66,6 +70,7 @@ Usage:
 ```bash
 chmod <options> <filename>
 ```
+**LETTER OPTIONS**
 | Options | Definition |
 | :-----: | :--------: |
 | u | owner |
